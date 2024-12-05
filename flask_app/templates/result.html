@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Résultat - Classificateur de Maladies du Haricot{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h2 class="mb-4">Résultat de la Prédiction</h2>
+    <div class="alert alert-info" role="alert">
+        <strong>Prédiction :</strong> {{ prediction }}
+    </div>
+    <h3>Image Téléchargée :</h3>
+    <img src="{{ image_url }}" alt="Image Téléchargée" class="img-thumbnail mt-3">
+    <div class="mt-4">
+        <a href="/" class="btn btn-secondary">Retour à la page d'accueil</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil - Classificateur de Maladies du Haricot{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h2 class="mb-4">Envoyez une image pour identifier la maladie</h2>
+    <form action="/predict" method="POST" enctype="multipart/form-data" class="mt-4">
+        <div class="mb-3">
+            <input type="file" name="file" accept="image/*" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Télécharger et Prédire</button>
+    </form>
+</div>
+{% endblock %}
